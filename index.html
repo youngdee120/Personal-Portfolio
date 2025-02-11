@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/0f8336e200.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+                <!-- <i class="fas fa-sun" id="theme-toggle" onclick="toggleTheme()"></i> <!-- Light mode icon -->
+            </nav>
+            <div class="header-text">
+                <p class="typing-animation">Data Scientist Machine Learning Engineer Deep Learning Enthusiast</p>
+                <h1>Hi, I'm <span>Kush</span><br>Software Engineer</h1>
+                <a href="#portfolio" class="btn">Check out my projects</a>
+                <a href="#" download class="btn">Download Resume</a>
+            </div>
+        </div>
+    </div>
+
+    <!------- About ------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/me1.jpg" alt="About Me">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I am a passionate Computer Science student with a strong foundation in **software development, data science, artificial intelligence, and networking**.  
+                        My expertise spans multiple fields, including **Machine Learning, Web Development, and Cybersecurity**, making me a versatile problem-solver in the ever-evolving tech landscape.  
+                
+                        I specialize in building intelligent systems and solving real-world problems using data-driven approaches. My journey has been fueled by hard work, curiosity, and a relentless drive to learn and innovate.  
+                        I believe in the power of data to transform industries and improve lives, and I am committed to leveraging my skills to make a positive impact.  
+                    </p>
+                
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                        <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+                        <p class="tab-links" onclick="opentab('interests')">Interests</p>
+                    </div>
+                
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Languages</span><br>Python, Java, C, R, SQL, JavaScript, PHP</li>
+                            <li><span>Data Science & Machine Learning</span><br>Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch, Neural Networks, NLP</li>
+                            <li><span>Deep Learning</span><br>CNNs, LSTMs, Transformers</li>
+                            <li><span>Web Development</span><br>HTML, CSS, JavaScript, Bootstrap, Flask, Django, React, RESTful APIs</li>
+                            <li><span>Database Management</span><br>MySQL, PostgreSQL, MongoDB</li>
+                            <li><span>Data Visualization</span><br>Matplotlib, Seaborn, Tableau</li>
+                            <li><span>Cloud & DevOps</span><br>AWS, Google Cloud, Docker, Kubernetes, GitHub Actions</li>
+                            <li><span>Networking & Security</span><br>Linux Administration, Ethical Hacking, Cybersecurity Fundamentals</li>
+                            <li><span>Mobile Development</span><br>React Native, Flutter</li>
+                            <li><span>Embedded Systems & IoT</span><br>Arduino, Raspberry Pi, Sensor-based automation</li>
+                        </ul>
+                    </div>
+                
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - Present</span><br>Freelance Data Scientist & AI Consultant – Building ML-driven solutions for businesses</li>
+                            <li><span>2022</span><br>Data Science Research Project – Analyzed Jumia’s declining sales trends and proposed solutions using ML models</li>
+                            <li><span>2021</span><br>Internship at Kenya Power Lighting Company – Assisted in **network infrastructure maintenance, cybersecurity analysis, and data management**</li>
+                            <li><span>2021</span><br>Web Developer (Freelance) – Designed and deployed multiple web applications for startups</li>
+                            <li><span>2019</span><br>Data Analyst Intern at a local startup – Developed dashboards and reports to track key performance indicators</li>
+                            <li><span>2018</span><br>Volunteer Data Analyst – Analyzed survey data for a non-profit organization</li>
+                        </ul>
+                    </div>
+                
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br>South Eastern Kenya University – **BSc. Computer Science**</li>
+                            <li><span>2019</span><br>Maryland High School</li>
+                            <li><span>2016</span><br>Visions Academy</li>
+                        </ul>
+                    </div>
+                
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>AI-Powered Sign Language Detector</span><br>Developed a deep learning model to recognize sign language gestures in real-time</li>
+                            <li><span>Crop Recommendation System</span><br>Built an ML model to suggest optimal crops based on climate conditions</li>
+                            <li><span>Music Streaming Service</span><br>Designed and developed a full-stack platform for streaming and recommending music</li>
+                            <li><span>Disaster Early Warning System</span><br>Integrated weather APIs and ML to provide real-time disaster alerts</li>
+                            <li><span>E-commerce API with Payment Gateway</span><br>Developed a secure and scalable RESTful API for online transactions</li>
+                            <li><span>IoT-based Smart Irrigation System</span><br>Built an IoT-enabled automated irrigation system for efficient water management</li>
+                        </ul>
+                    </div>
+                
+                    <div class="tab-contents" id="certifications">
+                        <ul>
+                            <li><span>Google Data Analytics Professional Certificate</span></li>
+                            <li><span>IBM AI Engineering Specialization</span></li>
+                            <li><span>Deep Learning Specialization - Coursera</span></li>
+                            <li><span>AWS Cloud Practitioner Certification</span></li>
+                            <li><span>Python for Data Science - Udacity</span></li>
+                            <li><span>Certified Ethical Hacker (CEH) - EC Council</span></li>
+                        </ul>
+                    </div>
+                
+                    <div class="tab-contents" id="interests">
+                        <ul>
+                            <li>Mentoring upcoming developers and contributing to open-source projects</li>
+                            <li>Exploring advancements in AI and deep learning</li>
+                            <li>Working on innovative solutions that solve real-world problems</li>
+                            <li>Staying updated with the latest tech trends</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!------- Skills & Tech Stack ------->
+<div id="skills-section">
+    <div class="skills-container">
+        <h1 class="skills-title">Skills & Tech Stack</h1>
+        <div class="skills-list">
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <h2 class="skill-title">Programming</h2>
+                <p class="skill-description">Python, R, SQL, JavaScript, C++, PHP</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-cogs"></i>
+                <h2 class="skill-title">Machine Learning & AI</h2>
+                <p class="skill-description">TensorFlow, PyTorch, Scikit-Learn, OpenCV, Keras, Natural Language Processing (NLP)</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-chart-line"></i>
+                <h2 class="skill-title">Data Analysis & Visualization</h2>
+                <p class="skill-description">Pandas, NumPy, Matplotlib, Seaborn, Tableau, Power BI, Plotly</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-cloud"></i>
+                <h2 class="skill-title">Big Data & Cloud</h2>
+                <p class="skill-description">AWS, GCP, Hadoop, Spark, Apache Kafka, Azure</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-tools"></i>
+                <h2 class="skill-title">DevOps & Deployment</h2>
+                <p class="skill-description">Docker, Kubernetes, Flask, FastAPI, Streamlit, CI/CD</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-git"></i>
+                <h2 class="skill-title">Version Control</h2>
+                <p class="skill-description">Git, GitHub, GitLab, Bitbucket</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-user-md"></i>
+                <h2 class="skill-title">Psychological Counseling</h2>
+                <p class="skill-description">Active listening, Empathy, Conflict resolution, Stress management</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-car"></i>
+                <h2 class="skill-title">Driving</h2>
+                <p class="skill-description">Valid driver's license, Safe driving practices, Navigation skills</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-comments"></i>
+                <h2 class="skill-title">Communication</h2>
+                <p class="skill-description">Public speaking, Presentation skills, Written communication</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-lightbulb"></i>
+                <h2 class="skill-title">Problem Solving</h2>
+                <p class="skill-description">Analytical thinking, Creative solutions, Critical thinking</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-users"></i>
+                <h2 class="skill-title">Teamwork</h2>
+                <p class="skill-description">Collaboration, Team leadership, Conflict resolution</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-clock"></i>
+                <h2 class="skill-title">Time Management</h2>
+                <p class="skill-description">Prioritization, Scheduling, Meeting deadlines</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-laptop-code"></i>
+                <h2 class="skill-title">Web Development</h2>
+                <p class="skill-description">HTML, CSS, JavaScript, React, Bootstrap</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-shield-alt"></i>
+                <h2 class="skill-title">Cybersecurity</h2>
+                <p class="skill-description">Network security, Risk assessment, Ethical hacking</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-chart-pie"></i>
+                <h2 class="skill-title">Project Management</h2>
+                <p class="skill-description">Agile methodologies, Scrum, Kanban</p>
+            </div>
+            <!-- <div class="skill-card">
+                <i class="fas fa-clipboard-list"></i>
+                <h2 class="skill-title">Research Skills</h2>
+                <p class="skill-description">Data collection, Literature review, Analytical skills</p>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+    <!------- Portfolio ------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Images/socialmedia.png" alt="Social Media Adverts">
+                <div class="layer">
+                    <h3>Social Media Adverts</h3>
+                    <p>Developed a marketing app to streamline social media advertising. Download the app on PlayStore.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/gaming.png" alt="Gaming App">
+                <div class="layer">
+                    <h3>Gaming App</h3>
+                    <p>Created an interactive gaming app with real-time analytics. Download the app on PlayStore.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/shopping.png" alt="Online Shopping App">
+                <div class="layer">
+                    <h3>Online Shopping App</h3>
+                    <p>Built an e-commerce platform with personalized recommendations. Download the app on PlayStore.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/phamacy.png" alt="Pharmacy Website">
+                <div class="layer">
+                    <h3>Pharmacy Website</h3>
+                    <p>A comprehensive website for managing pharmacy operations and online orders.</p>
+                    <a href="https://github.com/youngdee120/pharmacy-website" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/signup.png" alt="Sign Up Form">
+                <div class="layer">
+                    <h3>Sign Up Form</h3>
+                    <p>Developed a user-friendly sign-up form for web applications.</p>
+                    <a href="https://github.com/youngdee120/sign-up" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/suicide.png" alt="Suicide Model in Machine Learning">
+                <div class="layer">
+                    <h3>Suicide Model in Machine Learning</h3>
+                    <p>Created a predictive model to analyze factors contributing to suicide risk.</p>
+                    <a href="https://github.com/youngdee120/Suicide-model-in-machine-learning" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/depression.png" alt="Student Depression Model">
+                <div class="layer">
+                    <h3>Student Depression Model</h3>
+                    <p>Developed a model to assess and predict depression levels among students.</p>
+                    <a href="https://github.com/youngdee120/student_depression_model" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/crop.png" alt="Crop Recommendation Model">
+                <div class="layer">
+                    <h3>Crop Recommendation Model</h3>
+                    <p>Built a model to recommend optimal crops based on soil and climate conditions.</p>
+                    <a href="https://github.com/youngdee120/crop-recommendation-model" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/online learning.png" alt="Online Learning Website">
+                <div class="layer">
+                    <h3>Online Learning Website</h3>
+                    <p>Developed a platform for online courses and learning resources.</p>
+                    <a href="https://github.com/youngdee120/Online-learning-website" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/carwash.png" alt="Mobile Car Wash">
+                <div class="layer">
+                    <h3>Mobile Car Wash</h3>
+                    <p>Created an app for scheduling mobile car wash services.</p>
+                    <a href="https://github.com/youngdee120/mobilecarwash" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <!-- Additional works will be hidden initially -->
+            <div class="work hidden">
+                <img src="Images/learning.png" alt="Best Learning">
+                <div class="layer">
+                    <h3>Best Learning</h3>
+                    <p>Developed a platform for personalized learning experiences.</p>
+                    <a href="https://github.com/youngdee120/best-learning" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work hidden">
+                <img src="Images/rock & scissors.png" alt="Rock and Scissors Game">
+                <div class="layer">
+                    <h3>Rock and Scissors Game</h3>
+                    <p>Created a fun interactive game for users to play online.</p>
+                    <a href="https://github.com/youngdee120/Rock-And-sissors" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work hidden">
+                <img src="Images/portfolio.png" alt="Personal Portfolio">
+                <div class="layer">
+                    <h3>Personal Portfolio</h3>
+                    <p>Designed a personal portfolio to showcase my projects and skills.</p>
+                    <a href="https://github.com/youngdee120/Personal-Portfolio" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work hidden">
+                <img src="Images/learning1.png" alt="Online Learning">
+                <div class="layer">
+                    <h3>Online Learning</h3>
+                    <p>Developed an online learning platform with various courses.</p>
+                    <a href="https://github.com/youngdee120/online-learning" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work hidden">
+                <img src="Images/carwash1.png" alt="Mobile Car Wash 2">
+                <div class="layer">
+                    <h3>Mobile Car Wash 2</h3>
+                    <p>Enhanced features for the mobile car wash app for better user experience.</p>
+                    <a href="https://github.com/youngdee120/mobile-carwash" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work hidden">
+                <img src="Images/fert & crop.png" alt="Crop Fertilizer Recommendation">
+                <div class="layer">
+                    <h3>Crop Fertilizer Recommendation</h3>
+                    <p>Developed a model to recommend fertilizers based on crop type and soil.</p>
+                    <a href="https://github.com/youngdee120/crop-fertilizer-Recommendation" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work hidden">
+                <img src="Images/contribution.png" alt="Contribution Web App">
+                <div class="layer">
+                    <h3>Contribution Web App</h3>
+                    <p>Created a web app for tracking contributions to various projects.</p>
+                    <a href="https://github.com/Nashte13/ContributionWebApp" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work hidden">
+                <img src="Images/Ai and ml.png" alt="AI and Machine Learning Models">
+                <div class="layer">
+                    <h3>AI and Machine Learning Models</h3>
+                    <p>Developed various AI and machine learning models for different applications.</p>
+                    <a href="https://github.com/youngdee120/Ai-and-machine-learning-models" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work hidden">
+                <img src="Images/chama.png" alt="Chama Web App">
+                <div class="layer">
+                    <h3>Chama Web App</h3>
+                    <p>Built a web app for managing group savings and contributions.</p>
+                    <a href="https://github.com/Cyspakrs-Inc/chama-webapp1" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work hidden">
+                <img src="Images/quizs.png" alt="Quiz Web">
+                <div class="layer">
+                    <h3>Quiz Web</h3>
+                    <p>Developed an interactive quiz web application for educational purposes.</p>
+                    <a href="https://github.com/youngdee120/quizweb.github.io" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <button id="showMoreBtn" class="show-more">Show More</button>
+    </div>
+</div>
+
+    <!------- Contact ------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> deey440@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> 0112650257</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/165bXzNca2/" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/judas1200?s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/young.dee120?igshid=ZGUzMzM3NWJiOQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://chat.whatsapp.com/GuTruzbclo1DMGlcgSZqJC" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/in/samuel-gicharu-50a86b344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/demo pdf.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Kush. Working together <i class="fas fa-heart"></i> towards a great future.</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemen = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemen.style.right = "0";
+        }
+        function closemenu() {
+            sidemen.style.right = "-200px";
+        }
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const works = document.querySelectorAll('.work');
+        const showMoreBtn = document.getElementById('showMoreBtn');
+        let visibleCount = 10; // Initially visible items
+        let increment = 5; // Number of items to show on each click
+
+        // Hide all works beyond the initial visible count
+        works.forEach((work, index) => {
+            if (index >= visibleCount) {
+                work.classList.add('hidden');
+            }
+        });
+
+        showMoreBtn.addEventListener('click', function() {
+            // Show the next set of works
+            for (let i = visibleCount; i < visibleCount + increment && i < works.length; i++) {
+                works[i].classList.remove('hidden');
+            }
+            visibleCount += increment;
+
+            // Hide the button if all works are visible
+            if (visibleCount >= works.length) {
+                showMoreBtn.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+    <script>
+        const scriptURL = 'AKfycbyGqAs8XvQUofRQrBE3bbUswnoDtnRsFRP-1t5QNPs4z3UhB4OylH3Oaoq--mUYFb5Wng';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully";
+                    setTimeout(function () {
+                        msg.innerHTML = "";
+                    }, 5000);
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+    
+
+    <script>
+        function toggleTheme() {
+        const body = document.body;
+        body.classList.toggle("dark-mode");
+
+        // Change the icon based on the current theme
+        const themeToggleIcon = document.getElementById("theme-toggle");
+        if (body.classList.contains("dark-mode")) {
+            themeToggleIcon.classList.remove("fa-sun");
+            themeToggleIcon.classList.add("fa-moon"); // Change to moon icon for dark mode
+        } else {
+            themeToggleIcon.classList.remove("fa-moon");
+            themeToggleIcon.classList.add("fa-sun"); // Change to sun icon for light mode
+        }
+
+        // Save the current theme in local storage
+        localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
+    }
+
+    // Load the theme from local storage on page load
+    window.onload = function() {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+            document.body.classList.add("dark-mode");
+            document.getElementById("theme-toggle").classList.remove("fa-sun");
+            document.getElementById("theme-toggle").classList.add("fa-moon");
+        }
+    };
+    </script>
+
+
+
+
+</body>
+
+</html>
