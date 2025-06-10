@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://kit.fontawesome.com/0f8336e200.js" crossorigin="anonymous"></script>
@@ -31,7 +31,8 @@
                 <p class="typing-animation">Data Scientist Machine Learning Engineer Deep Learning Enthusiast</p>
                 <h1>Hi, I'm <span>Kush</span><br>Software Engineer</h1>
                 <a href="#portfolio" class="btn">Check out my projects</a>
-                <a href="#" download class="btn">Download Resume</a>
+                <a href="assets/Samuel_Personal_cv.pdf" target="_blank" class="btn">View Resume</a>
+
             </div>
         </div>
     </div>
@@ -406,7 +407,7 @@
                         <a href="https://chat.whatsapp.com/GuTruzbclo1DMGlcgSZqJC" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         <a href="https://www.linkedin.com/in/samuel-gicharu-50a86b344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
                     </div>
-                    <a href="images/demo pdf.pdf" download class="btn btn2">Download CV</a>
+                    <a href="assets/Samuel_Personal_cv.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
@@ -424,114 +425,7 @@
         </div>
     </div>
 
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-
-    <script>
-        var sidemen = document.getElementById("sidemenu");
-
-        function openmenu() {
-            sidemen.style.right = "0";
-        }
-        function closemenu() {
-            sidemen.style.right = "-200px";
-        }
-    </script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const works = document.querySelectorAll('.work');
-        const showMoreBtn = document.getElementById('showMoreBtn');
-        let visibleCount = 10; // Initially visible items
-        let increment = 5; // Number of items to show on each click
-
-        // Hide all works beyond the initial visible count
-        works.forEach((work, index) => {
-            if (index >= visibleCount) {
-                work.classList.add('hidden');
-            }
-        });
-
-        showMoreBtn.addEventListener('click', function() {
-            // Show the next set of works
-            for (let i = visibleCount; i < visibleCount + increment && i < works.length; i++) {
-                works[i].classList.remove('hidden');
-            }
-            visibleCount += increment;
-
-            // Hide the button if all works are visible
-            if (visibleCount >= works.length) {
-                showMoreBtn.style.display = 'none';
-            }
-        });
-    });
-</script>
-
-    <script>
-        const scriptURL = 'AKfycbyGqAs8XvQUofRQrBE3bbUswnoDtnRsFRP-1t5QNPs4z3UhB4OylH3Oaoq--mUYFb5Wng';
-        const form = document.forms['submit-to-google-sheet'];
-        const msg = document.getElementById("msg");
-
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Message sent successfully";
-                    setTimeout(function () {
-                        msg.innerHTML = "";
-                    }, 5000);
-                    form.reset();
-                })
-                .catch(error => console.error('Error!', error.message));
-        });
-    </script>
-    
-
-    <script>
-        function toggleTheme() {
-        const body = document.body;
-        body.classList.toggle("dark-mode");
-
-        // Change the icon based on the current theme
-        const themeToggleIcon = document.getElementById("theme-toggle");
-        if (body.classList.contains("dark-mode")) {
-            themeToggleIcon.classList.remove("fa-sun");
-            themeToggleIcon.classList.add("fa-moon"); // Change to moon icon for dark mode
-        } else {
-            themeToggleIcon.classList.remove("fa-moon");
-            themeToggleIcon.classList.add("fa-sun"); // Change to sun icon for light mode
-        }
-
-        // Save the current theme in local storage
-        localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
-    }
-
-    // Load the theme from local storage on page load
-    window.onload = function() {
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme === "dark") {
-            document.body.classList.add("dark-mode");
-            document.getElementById("theme-toggle").classList.remove("fa-sun");
-            document.getElementById("theme-toggle").classList.add("fa-moon");
-        }
-    };
-    </script>
-
-
-
+    <script src="js/script.js"></script>
 
 </body>
 
