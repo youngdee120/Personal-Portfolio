@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - My Portfolio</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/0f8336e200.js" crossorigin="anonymous"></script>
+</head>
+
+<body data-page="about">
+    <div id="site-header"></div>
+
+    <main id="about-page">
+        <div class="container">
+            <div class="row about-row">
+                <div class="about-col-1">
+                    <img src="Images/me1.jpg" alt="About Me">
+                </div>
+
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+
+                    <p>
+                        I am a passionate Computer Science student with a strong foundation in <strong>software development, data science, artificial intelligence, and networking</strong>.
+                        My expertise spans multiple fields, including <strong>Machine Learning, Web Development, and Cybersecurity</strong>, making me a versatile problem-solver in the ever-evolving tech landscape.
+                        I specialize in building intelligent systems and solving real-world problems using data-driven approaches. My journey has been fueled by hard work, curiosity, and a relentless drive to learn and innovate.
+                        I believe in the power of data to transform industries and improve lives, and I am committed to leveraging my skills to make a positive impact.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                        <p class="tab-links" onclick="opentab(event, 'projects')">Projects</p>
+                        <p class="tab-links" onclick="opentab(event, 'certifications')">Certifications</p>
+                        <p class="tab-links" onclick="opentab(event, 'interests')">Interests</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Languages</span><br>Python, Java, C, R, SQL, JavaScript, PHP</li>
+                            <li><span>Data Science & Machine Learning</span><br>Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch, Neural Networks, NLP</li>
+                            <li><span>Deep Learning</span><br>CNNs, LSTMs, Transformers</li>
+                            <li><span>Web Development</span><br>HTML, CSS, JavaScript, Bootstrap, Flask, Django, React, RESTful APIs</li>
+                            <li><span>Database Management</span><br>MySQL, PostgreSQL, MongoDB</li>
+                            <li><span>Data Visualization</span><br>Matplotlib, Seaborn, Tableau</li>
+                            <li><span>Cloud & DevOps</span><br>AWS, Google Cloud, Docker, Kubernetes, GitHub Actions</li>
+                            <li><span>Networking & Security</span><br>Linux Administration, Ethical Hacking, Cybersecurity Fundamentals</li>
+                            <li><span>Mobile Development</span><br>React Native, Flutter</li>
+                            <li><span>Embedded Systems & IoT</span><br>Arduino, Raspberry Pi, Sensor-based automation</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - Present</span><br>Freelance Data Scientist & AI Consultant – Building ML-driven solutions for businesses</li>
+                            <li><span>2022</span><br>Data Science Research Project – Analyzed Jumia’s declining sales trends and proposed solutions using ML models</li>
+                            <li><span>2021</span><br>Internship at Kenya Power Lighting Company – Assisted in network infrastructure maintenance, cybersecurity analysis, and data management</li>
+                            <li><span>2021</span><br>Web Developer (Freelance) – Designed and deployed multiple web applications for startups</li>
+                            <li><span>2019</span><br>Data Analyst Intern at a local startup – Developed dashboards and reports to track key performance indicators</li>
+                            <li><span>2018</span><br>Volunteer Data Analyst – Analyzed survey data for a non-profit organization</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br>South Eastern Kenya University – BSc. Computer Science</li>
+                            <li><span>2019</span><br>Maryland High School</li>
+                            <li><span>2016</span><br>Visions Academy</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>AI-Powered Sign Language Detector</span><br>Developed a deep learning model to recognize sign language gestures in real-time</li>
+                            <li><span>Crop Recommendation System</span><br>Built an ML model to suggest optimal crops based on climate conditions</li>
+                            <li><span>Music Streaming Service</span><br>Designed and developed a full-stack platform for streaming and recommending music</li>
+                            <li><span>Disaster Early Warning System</span><br>Integrated weather APIs and ML to provide real-time disaster alerts</li>
+                            <li><span>E-commerce API with Payment Gateway</span><br>Developed a secure and scalable RESTful API for online transactions</li>
+                            <li><span>IoT-based Smart Irrigation System</span><br>Built an IoT-enabled automated irrigation system for efficient water management</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="certifications">
+                        <ul>
+                            <li><span>Google Data Analytics Professional Certificate</span></li>
+                            <li><span>IBM AI Engineering Specialization</span></li>
+                            <li><span>Deep Learning Specialization - Coursera</span></li>
+                            <li><span>AWS Cloud Practitioner Certification</span></li>
+                            <li><span>Python for Data Science - Udacity</span></li>
+                            <li><span>Certified Ethical Hacker (CEH) - EC Council</span></li>
+                            <li><span>WorldQuant University Certificate in Data Science</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="interests">
+                        <ul>
+                            <li>Mentoring upcoming developers and contributing to open-source projects</li>
+                            <li>Exploring advancements in AI and deep learning</li>
+                            <li>Working on innovative solutions that solve real-world problems</li>
+                            <li>Staying updated with the latest tech trends</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="site-footer"></div>
+    <div id="chatbot-widget"></div>
+    <script src="js/chatbot.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/tabs.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<div class="chatbot-fab">
+    <button id="chatbotOpenBtn" type="button" aria-label="Open chatbot">
+        <i class="fas fa-comments"></i>
+    </button>
+</div>
+
+<div class="chatbot-panel" id="chatbotPanel" aria-hidden="true">
+    <div class="chatbot-header">
+        <div class="chatbot-title">
+            <div class="chatbot-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div>
+                <h3>Kush Bot</h3>
+                <p>Online now</p>
+            </div>
+        </div>
+
+        <button id="chatbotCloseBtn" type="button" aria-label="Close chatbot">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <div class="chatbot-messages" id="chatbotMessages">
+        <div class="bot-message">
+            <p>Hello, I am Kush Bot. Ask me about projects, skills, services, or contact details.</p>
+        </div>
+
+        <div class="quick-replies">
+            <button type="button" class="quick-reply">Projects</button>
+            <button type="button" class="quick-reply">Skills</button>
+            <button type="button" class="quick-reply">Contact</button>
+        </div>
+    </div>
+
+    <form class="chatbot-input-area" id="chatbotForm">
+        <input
+            type="text"
+            id="chatbotInput"
+            placeholder="Type your message..."
+            autocomplete="off"
+        >
+        <button type="submit" aria-label="Send message">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </form>
+</div>
