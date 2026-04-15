@@ -3,15 +3,90 @@
     padding-top: 90px;
 }
 
+.skills-intro-panel {
+    margin-bottom: 36px;
+}
+
 .skills-intro {
-    max-width: 760px;
-    margin-bottom: 28px;
+    max-width: 820px;
+    margin-bottom: 24px;
+}
+
+.section-badge {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 0, 79, 0.1);
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    margin-bottom: 14px;
 }
 
 .skills-intro p {
     color: var(--text-muted);
-    line-height: 1.8;
+    line-height: 1.85;
     font-size: 16px;
+    max-width: 760px;
+}
+
+.skills-snapshot {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.snapshot-card {
+    background: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: var(--card-shadow);
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.snapshot-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(255, 0, 79, 0.12), transparent 40%);
+    pointer-events: none;
+}
+
+.snapshot-card:hover {
+    transform: translateY(-6px);
+}
+
+.snapshot-card i {
+    font-size: 26px;
+    color: var(--primary-color);
+    margin-bottom: 14px;
+}
+
+.snapshot-card h3 {
+    font-size: 20px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.snapshot-card p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.skills-list-section {
+    margin-top: 18px;
+}
+
+.skills-section-title {
+    font-size: 34px;
+    margin-bottom: 20px;
+    color: var(--text-color);
 }
 
 .skills-grid {
@@ -89,7 +164,15 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .skills-snapshot {
+        grid-template-columns: 1fr;
+    }
+
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .skills-section-title {
+        font-size: 28px;
     }
 }

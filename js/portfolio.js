@@ -1,33 +1,78 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const works = document.querySelectorAll(".work");
+    const works = Array.from(document.querySelectorAll(".work"));
     const showMoreBtn = document.getElementById("showMoreBtn");
+    const grid = document.querySelector(".work-list");
 
-    if (!showMoreBtn || works.length === 0) return;
+    if (!showMoreBtn || !grid || works.length === 0) return;
 
-    let visibleCount = 10;
-    const increment = 4;
+    let visibleCount = 0;
+    let columns = 1;
 
-    works.forEach((work, index) => {
-        work.style.animationDelay = `${index * 70}ms`;
+    function getColumnCount() {
+        const styles = window.getComputedStyle(grid);
+        const template = styles.gridTemplateColumns;
 
-        if (index >= visibleCount) {
-            work.classList.add("hidden");
-        }
-    });
+        if (!template || template === "none") return 1;
 
-    if (works.length <= visibleCount) {
-        showMoreBtn.style.display = "none";
+        return template.split(" ").length;
+    }
+
+    function updateColumns() {
+        columns = getColumnCount();
+    }
+
+    function renderItems() {
+        works.forEach((work, index) => {
+            if (index < visibleCount) {
+                work.classList.remove("hidden");
+            } else {
+                work.classList.add("hidden");
+            }
+        });
+
+        showMoreBtn.style.display =
+            visibleCount >= works.length ? "none" : "inline-block";
+    }
+
+    function init() {
+        updateColumns();
+
+        // 👇 ALWAYS fill full rows
+        visibleCount = columns;
+
+        renderItems();
     }
 
     showMoreBtn.addEventListener("click", function () {
-        for (let i = visibleCount; i < visibleCount + increment && i < works.length; i++) {
-            works[i].classList.remove("hidden");
-        }
+        updateColumns();
 
-        visibleCount += increment;
+        // 👇 add full rows only
+        visibleCount = Math.min(visibleCount + columns, works.length);
 
-        if (visibleCount >= works.length) {
-            showMoreBtn.style.display = "none";
-        }
+        renderItems();
     });
+
+    // Handle resize properly
+    let resizeTimer;
+    window.addEventListener("resize", function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            const prevColumns = columns;
+            updateColumns();
+
+            if (columns !== prevColumns) {
+                // Adjust visible items to nearest full row
+                visibleCount = Math.ceil(visibleCount / columns) * columns;
+                visibleCount = Math.min(visibleCount, works.length);
+                renderItems();
+            }
+        }, 150);
+    });
+
+    // Animation delay
+    works.forEach((work, index) => {
+        work.style.animationDelay = `${index * 60}ms`;
+    });
+
+    init();
 });

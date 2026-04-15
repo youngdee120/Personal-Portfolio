@@ -18,40 +18,136 @@
 
     <main id="contact">
         <div class="container">
-            <div class="row contact-row">
+            <section class="contact-intro-panel">
+                <div class="contact-intro">
+                    <span class="section-badge">Contact Me</span>
+                    <h1 class="sub-title">Let’s Build Something Useful</h1>
+                    <p>
+                        I am open to opportunities, collaborations, technical support, freelance work, and project discussions.
+                        Use the form for email, or tap WhatsApp for a faster response.
+                    </p>
+                </div>
+
+                <div class="contact-snapshot">
+                    <article class="snapshot-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>Best for detailed project inquiries, formal communication, and attachments.</p>
+                    </article>
+
+                    <article class="snapshot-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>WhatsApp</h3>
+                        <p>Best for fast replies, short questions, and quick coordination.</p>
+                    </article>
+
+                    <article class="snapshot-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Collaborations</h3>
+                        <p>Open to internships, freelance work, and tech-based partnerships.</p>
+                    </article>
+                </div>
+            </section>
+
+            <div class="contact-grid">
                 <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
+                    <div class="contact-card">
+                        <h2>Direct Contact</h2>
 
-                    <p><i class="fas fa-paper-plane"></i> deey440@gmail.com</p>
-                    <p><i class="fas fa-phone-square-alt"></i> 0112650257</p>
+                        <a class="contact-line" href="mailto:deey440@gmail.com?subject=Portfolio%20Inquiry">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>deey440@gmail.com</span>
+                        </a>
 
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/share/165bXzNca2/" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="https://twitter.com/judas1200?s=09" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://instagram.com/young.dee120?igshid=ZGUzMzM3NWJiOQ==" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://chat.whatsapp.com/GuTruzbclo1DMGlcgSZqJC" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.linkedin.com/in/samuel-gicharu-50a86b344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a class="contact-line" href="https://wa.me/254701184392?text=Hello%20Samuel,%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp: 0701184392</span>
+                        </a>
+
+                        <a class="contact-line" href="tel:+254701184392">
+                            <i class="fas fa-phone-square-alt"></i>
+                            <span>Call: 0701184392</span>
+                        </a>
+
+                        <div class="contact-note">
+                            <i class="fas fa-bolt"></i>
+                            <p>Fastest response: WhatsApp</p>
+                        </div>
                     </div>
 
-                    <a href="assets/Samuel_Personal_cv.pdf" download class="btn btn2">Download CV</a>
+                    <div class="contact-card">
+                        <h2>Quick Message Ideas</h2>
+
+                        <div class="quick-message-list">
+                            <button type="button" class="quick-message">Hello Samuel, I would like to discuss a project opportunity.</button>
+                            <button type="button" class="quick-message">Hi, I found your portfolio and I want to connect about your work.</button>
+                            <button type="button" class="quick-message">Hello, I need help with a website, API, or tech project.</button>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <h2>Social Links</h2>
+
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/share/165bXzNca2/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                            <a href="https://twitter.com/judas1200?s=09" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                            <a href="https://instagram.com/young.dee120?igshid=ZGUzMzM3NWJiOQ==" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                            <a href="https://chat.whatsapp.com/GuTruzbclo1DMGlcgSZqJC" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://www.linkedin.com/in/samuel-gicharu-50a86b344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                        </div>
+
+                        <a href="assets/Samuel_Personal_cv.pdf" download class="btn btn2">Download CV</a>
+                    </div>
                 </div>
 
                 <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
+                    <div class="contact-card form-card">
+                        <h2>Send a Message</h2>
+                        <p class="form-subtitle">
+                            The form sends into your email inbox through Formspree. Replace the form id with your own endpoint and set the notifications to <strong>deey440@gmail.com</strong> in your Formspree setup.
+                        </p>
 
-                    <span id="msg"></span>
+                        <form action="https://formspree.io/f/xojyjvwk" method="POST">
+                            <input type="hidden" name="_subject" value="New portfolio inquiry">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <input type="text" name="subject" placeholder="Subject" value="Portfolio Inquiry" required>
+                            <textarea name="message" rows="8" required>Hello Samuel,
+
+I found your portfolio and I would like to connect with you regarding:</textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+
+                        <span id="msg"></span>
+                    </div>
                 </div>
             </div>
+
+            <section class="contact-bottom">
+                <div class="bottom-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Responsive Communication</h3>
+                    <p>Use email for detailed messages and WhatsApp for faster coordination.</p>
+                </div>
+
+                <div class="bottom-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Project Friendly</h3>
+                    <p>Ideal for freelance work, internships, portfolio discussions, and technical support roles.</p>
+                </div>
+
+                <div class="bottom-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Location</h3>
+                    <p>Nairobi, Kenya</p>
+                </div>
+            </section>
         </div>
     </main>
 
     <div id="site-footer"></div>
     <div id="chatbot-widget"></div>
+
     <script src="js/chatbot.js"></script>
     <script src="js/main.js"></script>
 </body>
